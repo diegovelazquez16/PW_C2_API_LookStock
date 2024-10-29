@@ -1,0 +1,9 @@
+{
+    "development": {
+      "username": "postgres",
+      "password": "v3lazqu3z",
+      "database": "lookStock2",
+      "host": "localhost",
+      "dialect": "postgres"
+    }
+  }
