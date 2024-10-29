@@ -22,5 +22,6 @@ db.Prenda = require('./prenda')(sequelize, Sequelize);
 db.PedidoProveedor = require('./pedidoProveedor')(sequelize, Sequelize);
 db.Usuario = require('./Usuario')(sequelize, Sequelize);
 db.HistorialContrataciones = require('./historialContrataciones')(sequelize, Sequelize);
+db.Venta = require ('./venta')(sequelize, Sequelize);
 
 module.exports = db;

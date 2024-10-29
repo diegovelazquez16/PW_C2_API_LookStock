@@ -8,6 +8,9 @@ const proveedorRoutes = require('./routes/proveedor');
 const prendaRoutes = require('./routes/prenda');
 const pedidoProveedorRoutes = require('./routes/pedidoProveedor');
 const authRoutes = require('./routes/authRoutes'); // Importar las rutas de autenticación
+const ventasRoutes = require('./routes/ventasRoutes');
+
+
 const {connection} = require('./models');
 const PORT = 3000;
 
@@ -31,6 +34,8 @@ app.use('/api/proveedores', proveedorRoutes);
 app.use('/api/prendas', prendaRoutes);
 app.use('/api/pedidosProveedores', pedidoProveedorRoutes);
 app.use('/api/auth', authRoutes);
+app.use('/api', ventasRoutes);
+
 
 connection.sync() // Sincroniza los modelos con la base de datos
   .then(() => {
