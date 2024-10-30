@@ -36,6 +36,5 @@ module.exports = (sequelize, DataTypes) => {
         foreignKey: 'id_prenda',
         onDelete: 'CASCADE'
     });
-
     return Venta;
 };

@@ -7,8 +7,9 @@ const historialRoutes = require('./routes/historialContratacionesRoutes');
 const proveedorRoutes = require('./routes/proveedor');
 const prendaRoutes = require('./routes/prenda');
 const pedidoProveedorRoutes = require('./routes/pedidoProveedor');
-const authRoutes = require('./routes/authRoutes'); // Importar las rutas de autenticación
+const authRoutes = require('./routes/authRoutes'); 
 const ventasRoutes = require('./routes/ventasRoutes');
+const facturaRoutes = require('./routes/facturaRoutes'); 
 
 
 const {connection} = require('./models');
@@ -29,12 +30,13 @@ app.use(express.json());
 
 // Rutas
 app.use('/api/empleados', empleadoRoutes);
-app.use('/api', historialRoutes); // Prefijo /api para todas las rutas
+app.use('/api', historialRoutes); 
 app.use('/api/proveedores', proveedorRoutes);
 app.use('/api/prendas', prendaRoutes);
 app.use('/api/pedidosProveedores', pedidoProveedorRoutes);
 app.use('/api/auth', authRoutes);
 app.use('/api', ventasRoutes);
+app.use('/api', facturaRoutes);  
 
 
 connection.sync() // Sincroniza los modelos con la base de datos
