@@ -1,6 +1,8 @@
 const express = require('express');
 const router = express.Router();
 const proveedorController = require('../controllers/proveedorController');
+const checkRole = require('../middlewares/checkRole'); 
+
 
 router.post('/',  checkRole(['admin']), proveedorController.createProveedor);
 router.get('/', checkRole(['admin']), proveedorController.getAllProveedores);
