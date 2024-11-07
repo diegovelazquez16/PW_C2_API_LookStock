@@ -15,11 +15,7 @@ const PORT = 3000;
 const app = express();
 
 // Configurar CORS
-app.use(cors({
-  origin: 'http://localhost:4200',  // Ajustar según tu aplicación frontend
-  methods: ['GET', 'POST', 'PUT', 'DELETE'],
-  allowedHeaders: ['Content-Type', 'Authorization']
-}));
+app.use(cors());
 
 // Middleware para parsear JSON
 app.use(express.json());
