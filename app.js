@@ -10,4 +10,6 @@ app.use('/api/proveedores', require('./routes/proveedor'));
 app.use('/api/prendas', require('./routes/prenda'));
 app.use('/api/pedidosProveedores', require('./routes/pedidoProveedor'));
 app.use('/api/historialContrataciones', require('./routes/historialContratacionesRoutes'))
+app.use('/api/ventas', require('./routes/ventasRoutes'))
+app.use('/api/facturas', require('./routes/facturaRoutes'))
 module.exports = app;
